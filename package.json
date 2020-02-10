@@ -1,29 +1,34 @@
 {
   "name": "puppet-theatre",
-  "version": "1.0.6",
+  "version": "1.0.18",
   "description": "",
   "author": "Andris Undiks",
   "license": "ISC",
   "scripts": {
     "build": "rollup -c",
     "lint": "standard",
-    "test": "jest --coverage",
-    "postinstall": "node src/post_install.js"
+    "test": "jest",
+    "postinstall": "node post_install.js"
   },
   "files": [
-    "src"
+    "post_install.js",
+    "jest-puppeteer.config.js",
+    "runtest.js"
   ],
-  "devDependencies": {
+  "requires":{
     "jest": "^25.1.0",
-    "json": "^9.0.6",
-    "rollup": "^1.31.0",
     "shelljs": "^0.8.3",
     "yargs": "^15.1.0",
     "jest-puppeteer": "^4.4.0",
     "puppeteer": "^2.0.0"
   },
   "dependencies": {
-    "gently-copy": "^3.2.0"
+    "gently-copy": "^3.2.0",
+    "jest": "^25.1.0",
+    "shelljs": "^0.8.3",
+    "yargs": "^15.1.0",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^2.0.0"
   },
   "jest": {
     "preset": "jest-puppeteer",
